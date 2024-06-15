@@ -1,0 +1,57 @@
+<!-- Exercice 4: 
+
+Écrire un script permettant à l’utilisateur de saisir le nombre de notes et les notes d'élèves d’une classe. Une fois la saisie terminée, calculer:
+
+ 1 La moyenne  de la classe
+
+ 2 le nombre d’élèves qui ont une note supérieure à la moyenne de la classe. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de la Moyenne de la Classe</title>
+    <style>
+   
+    </style>
+</head>
+<body>
+    <h1>CACUL DE LA MOYENNE D'UNE CLASSE</h1>
+    <form id="notes-form">
+        <label for="notes"><b>Entrez le nombre de note </b></label><br>
+        <input type="text" id="nombre-de-note" placeholder="nombre de bote"><br>
+        <label for="notes"><b>Entrez les notes sparees par virgule </b></label><br>
+        <input type="text" id="note" placeholder="10,20,15,20,09,04">
+        <div id="result"></div>
+        <button type="submit" style="height: 40px; width: 170px; padding: 10px 10px; background-color: blue; color: aliceblue; border-radius: 10px; margin-top: 12px;">
+            <B>Calculer la moyenne</B>
+        </button>
+    </form>
+
+<script src="fff.js"></script>
+</body>
+</html>
+
+<!-- 
+    <script>
+        document.getElementById('notes-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let notesInput = document.getElementById('notes').value;
+            let notesArray = notesInput.split(',').map(note => parseFloat(note.trim()));
+            
+            // Filtrer les valeurs non numériques
+            notesArray = notesArray.filter(note => !isNaN(note));
+
+            if (notesArray.length === 0) {
+                alert("Veuillez entrer des notes valides.");
+                return;
+            }
+
+            let sum = notesArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            let average = sum / notesArray.length;
+
+            document.getElementById('result').innerText = "La moyenne de la classe est : " + average.toFixed(2);
+        });
+    </script>
+-->
